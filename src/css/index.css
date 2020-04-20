@@ -1,4 +1,23 @@
+/* Global Variables */
+
+:root {
+  --main-red: rgb(211, 9, 19);
+  --main-dark: rgb(20, 20, 20);
+  --main-deep-dark: rgb(0, 0, 0);
+  --main-grey: rgb(153, 153, 153);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: black;
-  color: white;
+  font-family: 'Helvetica';
+  -webkit-font-smoothing: antialiased;
+  background: var(--main-dark);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
 }
