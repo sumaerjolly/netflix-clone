@@ -2,6 +2,7 @@
 
 :root {
   --main-red: rgb(211, 9, 19);
+  --main-red-hover: #e50914;
   --main-dark: rgb(20, 20, 20);
   --main-deep-dark: rgb(0, 0, 0);
   --main-grey: rgb(153, 153, 153);
@@ -20,4 +21,5 @@ body {
 
 a {
   text-decoration: none;
+  color: #fff;
 }
