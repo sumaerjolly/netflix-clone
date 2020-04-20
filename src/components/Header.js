@@ -1,9 +1,12 @@
 import React from 'react';
+import logo from '../svg/logo.svg';
 
 function Header() {
   return (
-    <div>
-      <h1>Header</h1>
+    <div className="header-container">
+      <div className="header-top">
+        <img src={logo} alt="netflix-logo" />
+      </div>
     </div>
   );
 }
