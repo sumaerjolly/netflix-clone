@@ -49,4 +49,11 @@ const HeaderComponent = styled.div`
       background: var(--main-red-hover);
     }
   }
+
+  // Header Top
+  .header-top {
+    position: relative;
+    height: 10rem;
+    z-index: 1;
+  }
 `;
