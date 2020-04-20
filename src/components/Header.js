@@ -12,6 +12,11 @@ function Header() {
           Sign In
         </NavLink>
       </div>
+      <div className="header-content">
+        <Title>See what's next.</Title>
+        <SubTitle>Watch anywhere. Cancel anytime.</SubTitle>
+        <button>try it now</button>
+      </div>
     </HeaderComponent>
   );
 }
@@ -56,4 +61,37 @@ const HeaderComponent = styled.div`
     height: 10rem;
     z-index: 1;
   }
+
+  // headerContent
+
+  .header-content {
+    width: 65%;
+    position: relative;
+    margin: 4.5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    z-index: 1;
+  }
+`;
+
+// Main title
+
+const Title = styled.h1`
+  margin: 0 0 1.2rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.1em;
+`;
+
+// Subtitle
+
+const SubTitle = styled.h2`
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  margin: 0 0 1.875rem;
 `;
