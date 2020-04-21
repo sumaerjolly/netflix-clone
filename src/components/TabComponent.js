@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import TabDoor from './tabs_nav/TabDoor';
 import TabsDevices from './tabs_nav/TabsDevices';
 import TabsPrice from './tabs_nav/TabsPrice';
-
 import '../css/TabsNav.css';
+import TabContentOne from './TabContentOne';
 
 function TabComponent() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -40,6 +39,9 @@ function TabComponent() {
             </p>
           </Tab>
         </TabList>
+        <TabPanel>
+          <TabContentOne />
+        </TabPanel>
       </Tabs>
     </div>
   );
