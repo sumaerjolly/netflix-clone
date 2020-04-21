@@ -42,6 +42,60 @@ function TabContentThree() {
                   <Icon icon={checkmark} size={10} />
                 </td>
               </tr>
+              <tr>
+                <td>Ultra HD Available</td>
+                <td>
+                  <Icon icon={cross} size={10} />
+                </td>
+                <td>
+                  <Icon icon={cross} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+              </tr>
+              <tr>
+                <td>Screens you can watch at the same time</td>
+                <td>1</td>
+                <td>2</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Watch on your laptop,TV. phone and Tablet </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+              </tr>
+              <tr>
+                <td>Unlimited Movies and TV shows </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+              </tr>
+              <tr>
+                <td>Cancel Anytime </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+                <td>
+                  <Icon icon={checkmark} size={10} />
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
