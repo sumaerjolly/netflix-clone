@@ -6,6 +6,7 @@ import TabsPrice from './tabs_nav/TabsPrice';
 import '../css/TabsNav.css';
 import TabContentOne from './TabContentOne';
 import TabContentTwo from './TabContentTwo';
+import TabContentThree from './TabContentThree';
 
 function TabComponent() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -45,6 +46,9 @@ function TabComponent() {
         </TabPanel>
         <TabPanel>
           <TabContentTwo />
+        </TabPanel>
+        <TabPanel>
+          <TabContentThree />
         </TabPanel>
       </Tabs>
     </div>
