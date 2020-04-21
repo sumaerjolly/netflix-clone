@@ -32,4 +32,31 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   list-style: none;
+  color: var(--main-grey);
+  margin: 0 12%;
+}
+
+/* Tabs hover effect */
+
+ul li:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+ul li:hover svg path {
+  fill: #ffffff;
+}
+
+/* The Active Tab */
+
+.active {
+  border-bottom: 4px solid var(--main-red);
+}
+
+.tab-selected {
+  color: #ffffff;
+}
+
+.tab-selected svg path {
+  fill: #ffffff;
 }
