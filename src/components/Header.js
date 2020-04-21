@@ -4,6 +4,7 @@ import { NavLink, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Icon } from 'react-icons-kit';
 import { arrow_right } from 'react-icons-kit/ikons/arrow_right';
+import { Button } from './Button';
 
 function Header() {
   return (
@@ -17,9 +18,9 @@ function Header() {
       <div className="header-content">
         <Title>See what's next.</Title>
         <SubTitle>Watch anywhere. Cancel anytime.</SubTitle>
-        <Link className="main-offer-btn">
+        <Button className="main-offer-btn" primary>
           try it now <Icon className="Icon" icon={arrow_right} size={32} />
-        </Link>
+        </Button>
       </div>
     </HeaderComponent>
   );
@@ -78,27 +79,6 @@ const HeaderComponent = styled.div`
     align-content: center;
     text-align: center;
     z-index: 1;
-  }
-
-  // The offer Button
-
-  .main-offer-btn {
-    display: inline-block;
-    background: var(--main-red);
-    text-transform: uppercase;
-    border: none;
-    outline: none;
-    margin: 0 33%;
-    padding: 1.5rem;
-    border-radius: 0.875rem;
-    font-size: 1.8rem;
-    text-align: center;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-    transition: background 0.2s ease-in;
-    cursor: pointer;
-    &:hover {
-      background: var(--main-red-hover);
-    }
   }
 
   .Icon {
