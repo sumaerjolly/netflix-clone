@@ -10,16 +10,29 @@ import '../css/TabsNav.css';
 function TabComponent() {
   return (
     <div>
-      <Tabs>
-        <TabList>
+      <Tabs className="tabs">
+        <TabList className="tab-nav-container">
           <Tab>
             <TabDoor />
+            <p>
+              <strong>
+                No commitments
+                <br />
+                Cancel online at anytime
+              </strong>
+            </p>
           </Tab>
           <Tab>
             <TabsDevices />
+            <p style={{ marginTop: '-5.3125rem' }}>
+              <strong>Watch Anywhere</strong>
+            </p>
           </Tab>
           <Tab>
             <TabsPrice />
+            <p>
+              <strong>Pick your price</strong>
+            </p>
           </Tab>
         </TabList>
       </Tabs>
