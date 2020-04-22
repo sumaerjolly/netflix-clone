@@ -139,7 +139,8 @@ const FooterContainer = styled.footer`
     width: 8rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 2rem 0 0 2rem;
+    margin: 2rem;
+    cursor: pointer;
   }
 
   // toggle language content
@@ -147,6 +148,7 @@ const FooterContainer = styled.footer`
   .lang-toggle {
     margin-left: 14.5%;
     position: absolute;
+    margin-top: -2rem;
   }
 
   .lang-toggle ul li {
