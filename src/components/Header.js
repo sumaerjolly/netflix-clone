@@ -72,6 +72,10 @@ const HeaderComponent = styled.div`
     &:hover {
       background: var(--main-red-hover);
     }
+    ${customMedia.lessThan('smallTablet')`
+      // margin-top: 1.25rem;
+      // right: 5%;
+  `}
   }
 
   // Header Top
@@ -95,9 +99,27 @@ const HeaderComponent = styled.div`
     z-index: 1;
   }
 
-  .Icon {
-    vertical-align: bottom;
+  .Icon svg{
+    vertical-align: bottom !important;
     margin-left: 1rem;
+    ${customMedia.lessThan('smallTablet')`
+     display: none !important;
+  `}
+  }
+
+  .main-offer-btn {
+    ${customMedia.lessThan('largeDesktop')`
+      margin: 0 33%;
+      font-size: 1.5rem;
+  `}
+    ${customMedia.lessThan('mediumDesktop')`
+      margin: 0 25%;
+      font-size: 1.5rem;
+  `}
+   ${customMedia.lessThan('tablet')`
+      margin: 0 20%;
+      font-size: 1.2rem;
+  `}
   }
 `;
 
