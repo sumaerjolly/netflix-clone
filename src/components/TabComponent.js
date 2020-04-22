@@ -20,25 +20,28 @@ function TabComponent() {
         <TabList className="tab-nav-container">
           <Tab className={`${tabIndex === 0 ? 'tab-selected active' : null}`}>
             <TabDoor />
-            <p>
+            <p className="lgScreen">
               <strong>
                 No commitments
                 <br />
                 Cancel online at anytime
               </strong>
             </p>
+            <span className="mdScreen">Cancel</span>
           </Tab>
           <Tab className={`${tabIndex === 1 ? 'tab-selected active' : null}`}>
             <TabsDevices />
-            <p style={{ marginTop: '-5.3125rem' }}>
+            <p className="lgScreen" style={{ marginTop: '-5.3125rem' }}>
               <strong>Watch Anywhere</strong>
             </p>
+            <span className="mdScreen">Devices</span>
           </Tab>
           <Tab className={`${tabIndex === 2 ? 'tab-selected active' : null}`}>
             <TabsPrice />
-            <p style={{ marginTop: '0.3rem' }}>
+            <p className="lgScreen" style={{ marginTop: '0.3rem' }}>
               <strong>Pick your price</strong>
             </p>
+            <span className="mdScreen">Prices</span>
           </Tab>
         </TabList>
         <TabPanel>

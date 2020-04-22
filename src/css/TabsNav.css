@@ -6,16 +6,47 @@
   fill: var(--main-grey);
 }
 
+/* Media Queries Tab Nav 1 */
+
+@media (max-width: 900px) {
+  .tab-icon-door {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+/* Tab Nav 2 */
+
 .tab-icon-devices {
   width: 9.6875rem;
   height: 9.6875rem;
   fill: var(--main-grey);
 }
 
+/* Media Queries Tab Nav 2 */
+
+@media (max-width: 900px) {
+  .tab-icon-devices {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+/* Tab Nav 3 */
+
 .tab-icon-price {
   width: 4.375rem;
   height: 4.375rem;
   fill: var(--main-grey);
+}
+
+/* Media Queries Tab Nav 3 */
+
+@media (max-width: 900px) {
+  .tab-icon-price {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
 
 /* Tabs */
@@ -59,4 +90,18 @@ ul li:hover svg path {
 
 .tab-selected svg path {
   fill: #ffffff;
+}
+
+/* Media for tab nav */
+
+@media (min-width: 900px) {
+  .mdScreen {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .lgScreen {
+    display: none;
+  }
 }
