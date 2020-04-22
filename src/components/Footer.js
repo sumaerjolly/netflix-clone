@@ -73,7 +73,7 @@ function Footer() {
         </ul>
         <div className="lang-btn">
           <Icon icon={iosWorld} size={20} />
-          English
+          &nbsp;&nbsp;English&nbsp;&nbsp;
           <Icon icon={arrowSortedDown} />
         </div>
       </div>
@@ -109,5 +109,17 @@ const FooterContainer = styled.footer`
   a:hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  // Language Button
+
+  .lang-btn {
+    background: transparent;
+    border: 0.9px solid #333;
+    padding: 0.8rem;
+    margin-left: 2rem;
+    width: 8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
