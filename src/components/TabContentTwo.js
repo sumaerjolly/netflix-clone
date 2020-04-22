@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from './Button';
 import styled from 'styled-components';
+import { generateMedia } from 'styled-media-query';
 import Img1 from '../images/tab-tv.png';
 import Img2 from '../images/tab-tablet.png';
 import Img3 from '../images/tab-macbook.png';
@@ -54,6 +55,14 @@ function TabContentTwo() {
 
 export default TabContentTwo;
 
+// Media Queries
+
+const customMedia = generateMedia({
+  desktop: '1440px',
+  mid: '1135px',
+  tablet: '900px'
+});
+
 // Main Tab Content Container
 
 const TabContentContainer = styled.div`
@@ -71,15 +80,35 @@ const TabContentContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 2.5rem;
+    ${customMedia.lessThan('desktop')`
+      grid-template-columns: repeat(2,1fr);
+  `}
+
+    ${customMedia.lessThan('tablet')`
+      grid-template-columns: 1fr;
+      text-align: center;
+      row-gap: 2rem;
+  `}
   }
 
   span {
     grid-column: 1 / 8;
+    ${customMedia.lessThan('tablet')`
+      grid-column: 1/ -1;
+      font-size: 1.5rem;
+
+  `}
   }
 
   .btn {
     // margin: 0 1.25rem 1.25rem;
     grid-column: 10/12;
+    ${customMedia.lessThan('tablet')`
+      grid-column: 1/ -1;
+      margin-left: 15%;
+      margin-right: 15%;
+
+  `}
   }
 
   // Tab Bottom Content
@@ -90,6 +119,10 @@ const TabContentContainer = styled.div`
     grid-gap: 2rem;
     text-align: center;
     margin-top: 2rem;
+    ${customMedia.lessThan('mid')`
+     grid-template-columns: 1fr;
+
+  `}
   }
 
   h3 {
