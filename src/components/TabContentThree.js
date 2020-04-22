@@ -4,6 +4,7 @@ import { Button } from './Button';
 import { Icon } from 'react-icons-kit';
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
 import { cross } from 'react-icons-kit/icomoon/cross';
+import { generateMedia } from 'styled-media-query';
 
 function TabContentThree() {
   return (
@@ -106,6 +107,14 @@ function TabContentThree() {
 
 export default TabContentThree;
 
+// Media Queries
+
+const customMedia = generateMedia({
+  desktop: '1350px',
+  medium: '1000px',
+  small: '760px'
+});
+
 // Main Container
 
 const TabContainer = styled.div`
@@ -120,16 +129,29 @@ const TabContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding: 3rem 0 0;
+    ${customMedia.lessThan('desktop')`
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      text-align: center;
+  `}
   }
 
   span {
     grid-column: 3/9;
     font-size: 1.5rem;
+    ${customMedia.lessThan('desktop')`
+     grid-column: 1/-1;
+  `}
   }
   .btn {
     grid-column: 10/12;
     // margin-left: 3rem;
     // margin-right: 5.1rem;
+    ${customMedia.lessThan('medium')`
+     grid-column: 1/-1;
+     margin-left: 30%;
+     margin-right: 30%;
+  `}
   }
 
   // Tab bottom content
@@ -144,6 +166,9 @@ const TabContainer = styled.div`
     width: 100%;
     margin-top: 2rem;
     border-collapse: collapse;
+    ${customMedia.lessThan('small')`
+      font-size: 1rem;
+  `}
   }
 
   table thead th {
