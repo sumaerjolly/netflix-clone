@@ -104,4 +104,10 @@ ul li:hover svg path {
   .lgScreen {
     display: none;
   }
+
+  .mdScreen {
+    padding: 0.8rem;
+    margin-bottom: 0.4rem;
+    display: block;
+  }
 }

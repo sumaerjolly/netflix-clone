@@ -27,21 +27,29 @@ function TabComponent() {
                 Cancel online at anytime
               </strong>
             </p>
-            <span className="mdScreen">Cancel</span>
+            <br />
+            <span className="mdScreen" style={{ marginTop: '0.4rem' }}>
+              Cancel
+            </span>
           </Tab>
           <Tab className={`${tabIndex === 1 ? 'tab-selected active' : null}`}>
             <TabsDevices />
             <p className="lgScreen" style={{ marginTop: '-5.3125rem' }}>
               <strong>Watch Anywhere</strong>
             </p>
-            <span className="mdScreen">Devices</span>
+            <span style={{ marginTop: '-5.3125rem' }} className="mdScreen">
+              Devices
+            </span>
           </Tab>
           <Tab className={`${tabIndex === 2 ? 'tab-selected active' : null}`}>
             <TabsPrice />
             <p className="lgScreen" style={{ marginTop: '0.3rem' }}>
               <strong>Pick your price</strong>
             </p>
-            <span className="mdScreen">Prices</span>
+            <br />
+            <span className="mdScreen" style={{ marginTop: '0.3rem' }}>
+              Prices
+            </span>
           </Tab>
         </TabList>
         <TabPanel>
