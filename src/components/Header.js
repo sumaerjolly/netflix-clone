@@ -97,6 +97,12 @@ const HeaderComponent = styled.div`
     align-content: center;
     text-align: center;
     z-index: 1;
+    ${customMedia.lessThan('smallTablet')`
+     display: grid;
+     grid-template-rows: repeat(3,60px);
+     margin-top: 8rem;
+     grid-gap: 1.5rem;
+  `}
   }
 
   .Icon svg{
@@ -120,6 +126,11 @@ const HeaderComponent = styled.div`
       margin: 0 20%;
       font-size: 1.2rem;
   `}
+  ${customMedia.lessThan('smallTablet')`
+      margin: 0 20%;
+      font-size: 1.2rem;
+      padding: 0;
+  `}
   }
 `;
 
@@ -130,6 +141,9 @@ const Title = styled.h1`
   font-size: 4.8rem;
   font-weight: 700;
   line-height: 1.1em;
+  ${customMedia.lessThan('tablet')`
+     font-size: 2.6rem;
+  `}
 `;
 
 // Subtitle
@@ -140,4 +154,8 @@ const SubTitle = styled.h2`
   line-height: 1.25em;
   text-transform: uppercase;
   margin: 0 0 1.875rem;
+  ${customMedia.lessThan('smallTablet')`
+     font-size: 1.4rem;
+     margin: 0;
+  `}
 `;
