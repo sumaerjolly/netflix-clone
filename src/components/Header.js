@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { Icon } from 'react-icons-kit';
 import { arrow_right } from 'react-icons-kit/ikons/arrow_right';
 import { Button } from './Button';
+// For Media Query
+import { generateMedia } from 'styled-media-query';
 
 function Header() {
   return (
@@ -28,6 +30,15 @@ function Header() {
 
 export default Header;
 
+// Media Queries
+
+const customMedia = generateMedia({
+  largeDesktop: '1350px',
+  mediumDesktop: '1150px',
+  tablet: '960px',
+  smallTablet: '740px'
+});
+
 // logo
 
 const Logo = styled.img`
@@ -37,6 +48,9 @@ const Logo = styled.img`
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  ${customMedia.lessThan('tablet')`
+    left: 20%;
+  `}
 `;
 
 // Header Container
@@ -52,7 +66,7 @@ const HeaderComponent = styled.div`
     font-size: 1rem;
     background: var(--main-red);
     position: absolute;
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     cursor: pointer;
     transition: background 0.2s ease-in;
     &:hover {
