@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Icon } from 'react-icons-kit';
 import { iosWorld } from 'react-icons-kit/ionicons/iosWorld';
 import { arrowSortedDown } from 'react-icons-kit/typicons/arrowSortedDown';
+import { generateMedia } from 'styled-media-query';
 
 function Footer() {
   const [langContent, setLangContent] = useState(false);
@@ -102,11 +103,20 @@ function Footer() {
 
 export default Footer;
 
+// Media Queries
+
+const customMedia = generateMedia({
+  tablet: '740px'
+});
+
 const FooterContainer = styled.footer`
   background: var(--main-deep-dark);
   padding-top: 10rem;
   padding-bottom: 3rem;
   color: #999;
+  ${customMedia.lessThan('tablet')`
+     padding-top: 5rem;
+  `}
 
   .footer-columns {
     width: 70%;
@@ -114,6 +124,9 @@ const FooterContainer = styled.footer`
     font-size: 0.9rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    ${customMedia.lessThan('tablet')`
+      grid-template-columns: repeat(2, 1fr); 
+  `}
   }
 
   ul li {
