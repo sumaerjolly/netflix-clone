@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../svg/logo.svg';
 import styled from 'styled-components';
+import LoginForm from './login/LoginForm';
 
 function Login() {
   return (
@@ -8,6 +9,7 @@ function Login() {
       <div className="header-top">
         <Logo src={logo} alt="netflix logo" className="logo" />
       </div>
+      <LoginForm />
     </div>
   );
 }
