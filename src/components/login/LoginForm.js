@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import FbLogo from '../../images/fb-logo.png';
 
 function LoginForm() {
-  const [state, setState] = useState({
+  const initState = {
+    checked: true,
     email: '',
     password: '',
     emailError: '',
     passwordError: ''
-  });
+  };
+
+  const [state, setState] = useState(initState);
+
+  // Validation for the form
 
   const regex = RegExp(
     /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
@@ -29,7 +34,7 @@ function LoginForm() {
     });
   };
 
-  // Validation
+  // Main Validate Function
 
   const validate = () => {
     let inputError = false;
@@ -71,13 +76,16 @@ function LoginForm() {
     e.preventDefault();
     const err = validate();
     if (!err) {
-      setState({
-        email: '',
-        password: '',
-        emailError: '',
-        passwordError: ''
-      });
+      setState(initState);
     }
+  };
+
+  // Checkbox toggling
+  const handleCheckbox = e => {
+    let checked = e.target.checked;
+    setState(prevState => {
+      return { ...prevState, checked };
+    });
   };
 
   return (
@@ -118,7 +126,11 @@ function LoginForm() {
           </div>
           <label className="checkbox-container">
             Remember Me
-            <input type="checkbox" checked />
+            <input
+              type="checkbox"
+              defaultChecked={state.checked}
+              onChange={handleCheckbox}
+            />
             <span className="checkmark"></span>
           </label>
           <Link to="/" className="need-help">
@@ -131,7 +143,8 @@ function LoginForm() {
             </Link>
             <br />
             <br />
-            <span style={{ color: '#999' }}>New to Netflix</span>&nbsp;&nbsp;
+            <span style={{ color: '#999' }}>New to Netflix</span>
+            &nbsp;&nbsp;
             <Link to="/" className="sign-up-text">
               Sign up now
             </Link>

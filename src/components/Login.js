@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../svg/logo.svg';
 import styled from 'styled-components';
 import LoginForm from './login/LoginForm';
+import LoginFooter from './login/LoginFooter';
 
 function Login() {
   return (
@@ -10,6 +11,7 @@ function Login() {
         <Logo src={logo} alt="netflix logo" className="logo" />
       </div>
       <LoginForm />
+      <LoginFooter />
     </div>
   );
 }
