@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import FbLogo from '../../images/fb-logo.png';
+import { generateMedia } from 'styled-media-query';
 
 function LoginForm() {
   const initState = {
@@ -157,6 +158,12 @@ function LoginForm() {
 
 export default LoginForm;
 
+// Media queries
+
+const customMedia = generateMedia({
+  tablet: '640px'
+});
+
 // Form Container
 
 const FormContainer = styled.div`
@@ -164,6 +171,9 @@ const FormContainer = styled.div`
   justify-content: center;
   position: relative;
   z-index: 5;
+  ${customMedia.lessThan('tablet')`
+		border-bottom: 0.9px solid #999;
+  `}
 
   .form-container {
     background: rgba(0, 0, 0, 0.8);
@@ -171,6 +181,10 @@ const FormContainer = styled.div`
     width: 28.125rem;
     height: 41.25rem;
     padding: 4rem;
+    ${customMedia.lessThan('tablet')`
+		 padding: 0.6rem;
+		 height: 35rem;
+  `}
   }
 
   .input-container {
@@ -254,6 +268,9 @@ const FormContainer = styled.div`
     color: #828282;
     margin-left: 6.6rem;
     font-size: 0.9rem;
+    ${customMedia.lessThan('tablet')`
+			margin-left: 13rem;
+  `}
   }
 
   // bottom part form

@@ -82,7 +82,7 @@ const FooterContainer = styled.footer`
   position: relative;
   z-index: 5;
   ${customMedia.lessThan('tablet')`
-     padding-top: 5rem;
+     padding-bottom: 3rem;
   `}
 
   ul {
