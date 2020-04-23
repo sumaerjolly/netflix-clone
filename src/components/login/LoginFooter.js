@@ -15,8 +15,8 @@ function LoginFooter() {
   };
   return (
     <FooterContainer>
-      <span style={{ marginLeft: '18%', fontSize: '1.125rem' }}>
-        Questions? <Link to="#">Contact us.</Link>
+      <span style={{ marginLeft: '10%', color: '#999' }}>
+        Questions?&nbsp;<Link to="#">Contact us.</Link>
       </span>
       <div className="footer-columns">
         <ul>
@@ -34,12 +34,13 @@ function LoginFooter() {
             <Link>Privacy Statement</Link>
           </li>
         </ul>
-        <div className="lang-btn" onClick={handleToggle}>
-          <Icon icon={iosWorld} size={20} />
-          &nbsp;&nbsp;English&nbsp;&nbsp;
-          <Icon icon={arrowSortedDown} />
-        </div>
       </div>
+      <div className="lang-btn" onClick={handleToggle}>
+        <Icon icon={iosWorld} size={20} />
+        &nbsp;&nbsp;English&nbsp;&nbsp;
+        <Icon icon={arrowSortedDown} />
+      </div>
+
       {/* Toggle Language Content */}
       {langContent && (
         <div className="lang-toggle">
@@ -50,7 +51,14 @@ function LoginFooter() {
         </div>
       )}
 
-      <span style={{ marginLeft: '17.1%', fontSize: '0.9rem' }}>
+      <span
+        style={{
+          marginLeft: '10%',
+          fontSize: '0.9rem',
+          marginTop: '2rem',
+          color: '#999'
+        }}
+      >
         Netflix India
       </span>
     </FooterContainer>
@@ -66,16 +74,25 @@ const customMedia = generateMedia({
 });
 
 const FooterContainer = styled.footer`
-  background: var(--main-deep-dark);
-  padding-top: 10rem;
-  padding-bottom: 3rem;
-  color: #999;
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  margin-top: 6rem;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
   ${customMedia.lessThan('tablet')`
      padding-top: 5rem;
   `}
 
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
   .footer-columns {
-    width: 70%;
+    width: 80%;
+    color: #999;
     margin: 1rem auto 0;
     font-size: 0.9rem;
     display: grid;
@@ -92,6 +109,12 @@ const FooterContainer = styled.footer`
 
   a {
     color: #999;
+    font-size: 0.9rem;
+  }
+
+  p {
+    text-decoration: underline;
+    cursor: pointer;
   }
 
   a:hover {
@@ -105,17 +128,19 @@ const FooterContainer = styled.footer`
     background: transparent;
     border: 0.9px solid #333;
     padding: 1rem;
+    color: #999;
     width: 8rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 2rem;
+    margin-left: 10%;
     cursor: pointer;
   }
 
   // toggle language content
 
   .lang-toggle {
-    margin-left: 14.5%;
+    margin-left: 10%;
     position: absolute;
     margin-top: -2rem;
   }
