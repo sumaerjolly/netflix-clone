@@ -131,7 +131,7 @@ const FooterContainer = styled.footer`
     color: #999;
     width: 8rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     margin: 2rem;
     margin-left: 10%;
     cursor: pointer;
