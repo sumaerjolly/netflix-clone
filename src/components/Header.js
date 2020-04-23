@@ -13,7 +13,7 @@ function Header() {
     <HeaderComponent className="header-container">
       <div className="header-top">
         <Logo src={logo} alt="netflix-logo" />
-        <NavLink to="#" className="signIn-btn">
+        <NavLink to="/login" className="signIn-btn">
           Sign In
         </NavLink>
       </div>
