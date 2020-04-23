@@ -97,6 +97,7 @@ const FormContainer = styled.div`
     position: relative;
     font-size: 0.9rem;
     cursor: pointer;
+    color: #999;
   }
 
   .checkbox-container input {
