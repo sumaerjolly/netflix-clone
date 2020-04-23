@@ -1,19 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import FbLogo from '../../images/fb-logo.png';
 
 function LoginForm() {
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+    emailError: '',
+    passwordError: ''
+  });
+
+  const handleEmailChange = e => {
+    let email = e.target.value;
+    setState(prevState => {
+      return { ...prevState, email };
+    });
+  };
+
+  const handlePasswordChange = e => {
+    let password = e.target.value;
+    setState(prevState => {
+      return { ...prevState, password };
+    });
+  };
+
   return (
     <FormContainer>
       <div className="form-container">
         <form>
           <h1>Sign In</h1>
           <div className="input-container">
-            <input className="input-empty" type="email" required />
+            <input
+              className="input-empty"
+              type="email"
+              required
+              onChange={handleEmailChange}
+            />
             <label>Email or Phone No</label>
           </div>
           <div className="input-container">
-            <input className="input-empty" type="password" required />
+            <input
+              className="input-empty"
+              type="password"
+              required
+              onChange={handlePasswordChange}
+            />
             <label>Password</label>
           </div>
           <div className="input-container">
@@ -27,6 +59,18 @@ function LoginForm() {
           <Link to="/" className="need-help">
             Need Help?
           </Link>
+          <div className="bottom-form">
+            <img src={FbLogo} alt="facebook" />
+            <Link to="/" className="login-fb-text">
+              Login with Facebook
+            </Link>
+            <br />
+            <br />
+            <span style={{ color: '#999' }}>New to Netflix</span>&nbsp;&nbsp;
+            <Link to="/" className="sign-up-text">
+              Sign up now
+            </Link>
+          </div>
         </form>
       </div>
     </FormContainer>
@@ -132,6 +176,32 @@ const FormContainer = styled.div`
     color: #828282;
     margin-left: 6.6rem;
     font-size: 0.9rem;
+  }
+
+  // bottom part form
+
+  .bottom-form img {
+    width: 1.5625rem;
+    margin: 0.625rem 0.625rem -0.4375rem 0;
+  }
+
+  .login-fb-text {
+    color: #828283;
+    font-size: 0.9rem;
+  }
+
+  .bottom-form {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 4rem;
+  }
+
+  .sign-up-text {
+    font-size: 1.1rem;
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
