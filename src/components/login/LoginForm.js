@@ -87,20 +87,26 @@ function LoginForm() {
           <h1>Sign In</h1>
           <div className="input-container">
             <input
-              className="input-empty"
+              className={
+                state.emailError ? 'input-error input-empty' : 'input-empty'
+              }
               type="email"
               required
               onChange={handleEmailChange}
+              value={state.email}
             />
             <label>Email</label>
             <span style={{ color: '#db7302' }}>{state.emailError}</span>
           </div>
           <div className="input-container">
             <input
-              className="input-empty"
+              className={
+                state.passwordError ? 'input-error input-empty' : 'input-empty'
+              }
               type="password"
               required
               onChange={handlePasswordChange}
+              value={state.password}
             />
             <label>Password</label>
             <span style={{ color: '#db7302' }}>{state.passwordError}</span>
@@ -264,7 +270,7 @@ const FormContainer = styled.div`
   }
 
   .input-error {
-    border: 1px solid #db7302;
+    border-bottom: 1px solid #db7302;
   }
 `;
 
