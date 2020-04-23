@@ -11,6 +11,10 @@ function LoginForm() {
     passwordError: ''
   });
 
+  const regex = RegExp(
+    /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+  );
+
   const handleEmailChange = e => {
     let email = e.target.value;
     setState(prevState => {
@@ -25,6 +29,57 @@ function LoginForm() {
     });
   };
 
+  // Validation
+
+  const validate = () => {
+    let inputError = false;
+    const errors = {
+      emailError: '',
+      passwordError: ''
+    };
+
+    if (!state.email) {
+      inputError = true;
+      errors.emailError = 'Please enter a valid Email';
+    } else if (!state.email.match(regex)) {
+      inputError = true;
+      errors.emailError = (
+        <span style={{ color: 'red' }}>
+          {' '}
+          The entered email address is invalid
+        </span>
+      );
+    }
+
+    if (state.password.length < 6) {
+      inputError = true;
+      errors.passwordError = 'Your password must contain at least 6 characters';
+    }
+
+    setState(prevState => {
+      return {
+        ...prevState,
+        emailError: errors.emailError,
+        passwordError: errors.passwordError
+      };
+    });
+
+    return inputError;
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const err = validate();
+    if (!err) {
+      setState({
+        email: '',
+        password: '',
+        emailError: '',
+        passwordError: ''
+      });
+    }
+  };
+
   return (
     <FormContainer>
       <div className="form-container">
@@ -37,7 +92,8 @@ function LoginForm() {
               required
               onChange={handleEmailChange}
             />
-            <label>Email or Phone No</label>
+            <label>Email</label>
+            <span style={{ color: '#db7302' }}>{state.emailError}</span>
           </div>
           <div className="input-container">
             <input
@@ -47,9 +103,12 @@ function LoginForm() {
               onChange={handlePasswordChange}
             />
             <label>Password</label>
+            <span style={{ color: '#db7302' }}>{state.passwordError}</span>
           </div>
           <div className="input-container">
-            <Button type="submit">Sign In</Button>
+            <Button onClick={handleSubmit} type="submit">
+              Sign In
+            </Button>
           </div>
           <label className="checkbox-container">
             Remember Me
@@ -202,6 +261,10 @@ const FormContainer = styled.div`
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .input-error {
+    border: 1px solid #db7302;
   }
 `;
 
