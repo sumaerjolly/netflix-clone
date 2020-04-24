@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import logo from '../svg/logo.svg';
 import Checkmark from '../images/Checkmark.png';
@@ -7,6 +7,9 @@ import { Button } from '../components/Button';
 import FooterChoosePlan from '../components/choosePlan/FooterChoosePlan';
 
 function ChoosePlan() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <MainContainer>
       <div className="header-top">
