@@ -5,6 +5,7 @@ import { generateMedia } from 'styled-media-query';
 import Img1 from '../images/tab-tv.png';
 import Img2 from '../images/tab-tablet.png';
 import Img3 from '../images/tab-macbook.png';
+import { Link } from 'react-router-dom';
 
 function TabContentTwo() {
   return (
@@ -14,7 +15,9 @@ function TabContentTwo() {
           <span style={{ fontSize: '1.5rem' }}>
             Watch TV shows and movies anytime, anywhere - personalized for you.
           </span>
-          <Button className="btn">try it now</Button>
+          <Link to="/plans">
+            <Button className="btn">try it now</Button>
+          </Link>
         </div>
         <div className="tab-bottom-content">
           <div>
@@ -100,7 +103,7 @@ const TabContentContainer = styled.div`
   `}
   }
 
-  .btn {
+  a {
     // margin: 0 1.25rem 1.25rem;
     grid-column: 10/12;
     ${customMedia.lessThan('tablet')`

@@ -28,7 +28,9 @@ function ChoosePlan() {
           <div className="bullet">Everything on Netflix for one low price.</div>
           <div className="bullet">Unlimited viewing on all your devices</div>
         </div>
-        <Button>See the plans</Button>
+        <Link to="/">
+          <Button>See the plans</Button>
+        </Link>
       </div>
       <FooterChoosePlan />
     </MainContainer>

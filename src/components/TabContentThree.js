@@ -5,6 +5,7 @@ import { Icon } from 'react-icons-kit';
 import { checkmark } from 'react-icons-kit/icomoon/checkmark';
 import { cross } from 'react-icons-kit/icomoon/cross';
 import { generateMedia } from 'styled-media-query';
+import { Link } from 'react-router-dom';
 
 function TabContentThree() {
   return (
@@ -12,7 +13,9 @@ function TabContentThree() {
       <div className="tab-content">
         <div className="tab-top-content">
           <span>Choose one plan and watch everything on text</span>
-          <Button className="btn">try it now</Button>
+          <Link to="/plans">
+            <Button className="btn">try it now</Button>
+          </Link>
         </div>
         <div className="tab-bottom-content">
           <table>
@@ -143,7 +146,7 @@ const TabContainer = styled.div`
      grid-column: 1/-1;
   `}
   }
-  .btn {
+  a {
     grid-column: 10/12;
     // margin-left: 3rem;
     // margin-right: 5.1rem;

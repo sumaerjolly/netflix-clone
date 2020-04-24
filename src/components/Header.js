@@ -20,9 +20,11 @@ function Header() {
       <div className="header-content">
         <Title>See what's next.</Title>
         <SubTitle>Watch anywhere. Cancel anytime.</SubTitle>
-        <Button className="main-offer-btn" primary>
-          try it now <Icon className="Icon" icon={arrow_right} size={32} />
-        </Button>
+        <Link to="/plans">
+          <Button className="main-offer-btn" primary>
+            try it now <Icon className="Icon" icon={arrow_right} size={32} />
+          </Button>
+        </Link>
       </div>
     </HeaderComponent>
   );
