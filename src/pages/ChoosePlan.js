@@ -4,6 +4,7 @@ import logo from '../svg/logo.svg';
 import Checkmark from '../images/Checkmark.png';
 import { Link, NavLink } from 'react-router-dom';
 import { Button } from '../components/Button';
+import FooterChoosePlan from '../components/choosePlan/FooterChoosePlan';
 
 function ChoosePlan() {
   return (
@@ -29,6 +30,7 @@ function ChoosePlan() {
         </div>
         <Button>See the plans</Button>
       </div>
+      <FooterChoosePlan />
     </MainContainer>
   );
 }
@@ -43,7 +45,9 @@ const MainContainer = styled.div`
   .header-top {
     background: #fff;
     height: 6rem;
-    border-bottom: solid 1px #6e6e6e;
+    border-bottom: solid 1px #e6e6e6;
+    margin: 0;
+    padding: 0;
   }
 
   .header-content {
@@ -51,11 +55,11 @@ const MainContainer = styled.div`
     justify-content: center;
     background: #fff;
     color: var(--main-dark);
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     width: 65%;
     position: relative;
     margin: auto;
-    margin-top: 4.5rem;
+    margin-top: 0.5rem;
     text-align: center;
     align-content: center;
     flex-direction: column;
@@ -78,7 +82,7 @@ const MainContainer = styled.div`
     text-align: left;
     margin: 1rem auto 3rem;
     padding-left: 1.5625rem;
-    width: 75%;
+    width: 85%;
     font-size: 17px;
     padding: auto;
   }
@@ -104,6 +108,23 @@ const MainContainer = styled.div`
     border-bottom: 1px solid #e50914;
     border-left: 1px solid #e50914;
     transform: rotate(-45deg);
+  }
+
+  // sign in btn
+
+  .sign-in-btn {
+    margin: 1.625rem 3% 0;
+    padding: 0.4375rem 1.625rem;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--main-dark);
+    font-size: 1.25rem;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
