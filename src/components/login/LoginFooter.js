@@ -21,17 +21,17 @@ function LoginFooter() {
       <div className="footer-columns">
         <ul>
           <li>
-            <Link>Gift Card Terms</Link>
+            <Link to="#">Gift Card Terms</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <Link>Terms Of Use</Link>
+            <Link to="#">Terms Of Use</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <Link>Privacy Statement</Link>
+            <Link to="#">Privacy Statement</Link>
           </li>
         </ul>
       </div>

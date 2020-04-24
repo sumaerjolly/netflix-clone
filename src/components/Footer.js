@@ -21,61 +21,61 @@ function Footer() {
       <div className="footer-columns">
         <ul>
           <li>
-            <Link>FAQ</Link>
+            <Link to="#">FAQ</Link>
           </li>
           <li>
-            <Link>Investor Relations</Link>
+            <Link to="#">Investor Relations</Link>
           </li>
           <li>
-            <Link>Privacy</Link>
+            <Link to="#">Privacy</Link>
           </li>
           <li>
-            <Link>Speed Test</Link>
+            <Link to="#">Speed Test</Link>
           </li>
           <li>
-            <Link>Netflix Originals</Link>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <Link>Help Centre</Link>
-          </li>
-          <li>
-            <Link>Jobs</Link>
-          </li>
-          <li>
-            <Link>Cookie Preferences</Link>
-          </li>
-          <li>
-            <Link>Legal Notices</Link>
+            <Link to="#">Netflix Originals</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <Link>Account</Link>
+            <Link to="#">Help Centre</Link>
           </li>
           <li>
-            <Link>Ways to Watch</Link>
+            <Link to="#">Jobs</Link>
           </li>
           <li>
-            <Link>Corporate Information</Link>
+            <Link to="#">Cookie Preferences</Link>
           </li>
           <li>
-            <Link>Netflix Originals</Link>
+            <Link to="#">Legal Notices</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <Link>Media Centre</Link>
+            <Link to="#">Account</Link>
           </li>
           <li>
-            <Link>Terms of Use</Link>
+            <Link to="#">Ways to Watch</Link>
           </li>
           <li>
-            <Link>Contact Us</Link>
+            <Link to="#">Corporate Information</Link>
           </li>
           <li>
-            <Link>Buy Gift Cards</Link>
+            <Link to="#">Netflix Originals</Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link to="#">Media Centre</Link>
+          </li>
+          <li>
+            <Link to="#">Terms of Use</Link>
+          </li>
+          <li>
+            <Link to="#">Contact Us</Link>
+          </li>
+          <li>
+            <Link to="#">Buy Gift Cards</Link>
           </li>
         </ul>
         <div className="lang-btn" onClick={handleToggle}>
